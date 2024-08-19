@@ -3,45 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic HTML Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+    <title>Open About:Blank with Hello World</title>
+    <script>
+        function openHelloWorld() {
+            // Open a new blank window
+            var newWindow = window.open('about:blank', '_blank');
+
+            // Write HTML content to the new window
+            newWindow.document.write('<!DOCTYPE html>');
+            newWindow.document.write('<html lang="en">');
+            newWindow.document.write('<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Hello World</title></head>');
+            newWindow.document.write('<body><h1>Hello World</h1></body>');
+            newWindow.document.write('</html>');
+
+            // Close the document stream
+            newWindow.document.close();
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+
+        // Automatically open the "hello world" page when the script runs
+        window.onload = openHelloWorld;
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <main>
-        <h2>About Us</h2>
-        <p>This is a basic HTML site. You can add more content here to describe your site.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac laoreet justo. Curabitur euismod, odio a condimentum laoreet, purus erat sagittis purus, nec laoreet est elit sit amet ante.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
+    <h1>Opening a new page with Hello World...</h1>
 </body>
 </html>
